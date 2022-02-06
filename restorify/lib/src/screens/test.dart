@@ -7,9 +7,9 @@ class RadialGradientApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: const Color.fromARGB(255, 255, 255, 255),
-      child: new Container(
-          decoration: new BoxDecoration(
-              gradient: new RadialGradient(
+      child: Container(
+          decoration: const BoxDecoration(
+              gradient: RadialGradient(
             colors: [
               Color.fromARGB(255, 190, 184, 235),
               Color.fromARGB(255, 228, 164, 244),
