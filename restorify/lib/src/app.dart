@@ -12,7 +12,7 @@ class App extends StatelessWidget {
     return MaterialApp(
       title: 'Restorify',
       theme: ThemeData(accentColor: Colors.orange, primarySwatch: Colors.blue),
-      home: DashboardScreen(),
+      home: StartScreen(),
     );
   }
 }
