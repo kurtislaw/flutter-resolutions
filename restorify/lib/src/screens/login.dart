@@ -2,6 +2,7 @@ import 'dart:ffi';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:restorify/src/screens/dashboard.dart';
 import 'package:restorify/src/screens/home.dart';
 import 'package:restorify/src/screens/start.dart';
 
@@ -99,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       auth.signInWithEmailAndPassword(
                           email: _email, password: _password);
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => HomeScreen()));
+                          builder: (context) => StartScreen()));
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(80.0)),
