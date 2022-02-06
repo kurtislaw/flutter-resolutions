@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "144170532033",
+    "project_id": "flutter-basic-7cd98",
+    "storage_bucket": "flutter-basic-7cd98.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:144170532033:android:bd4388cdca29efd96e2840",
+        "android_client_info": {
+          "package_name": "com.example.restorify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "144170532033-rbreoaj0ngoaeaobreu4p6rv7t9dbncv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBV7r8j0wcayO3c1TKFN-_IqicIF1bC2b8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "144170532033-rbreoaj0ngoaeaobreu4p6rv7t9dbncv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
