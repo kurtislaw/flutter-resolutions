@@ -20,6 +20,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
+    double h = MediaQuery.of(context).size.height;
+
     return Scaffold(
         body: Container(
       width: double.infinity,
@@ -35,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Container(
             alignment: Alignment.topLeft,
             child: Padding(
-              padding: EdgeInsets.fromLTRB(8.0, 70.0, 8.0, 8.0),
+              padding: EdgeInsets.fromLTRB(8.0, h * 0.1, 8.0, 8.0),
               child: FlatButton(
                 onPressed: () {
                   Navigator.of(context).pop(context);
@@ -48,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.fromLTRB(8.0, 30.0, 175.0, 8.0),
+            padding: EdgeInsets.fromLTRB(8.0, h * 0.05, 175.0, 8.0),
             child: Container(
               width: 200,
               height: 40,
@@ -86,7 +88,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(8.0, 400.0, 8.0, 0.0),
+            padding: EdgeInsets.fromLTRB(8.0, h * 0.4, 8.0, 0.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
