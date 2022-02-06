@@ -13,6 +13,8 @@ class StartScreen extends StatefulWidget {
 class _StartScreenState extends State<StartScreen> {
   @override
   Widget build(BuildContext context) {
+    double h = MediaQuery.of(context).size.height;
+
     return Scaffold(
       body: Container(
         width: double.infinity,
@@ -34,12 +36,12 @@ class _StartScreenState extends State<StartScreen> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(8.0, 100.0, 200.0, 50.0),
+              padding: EdgeInsets.fromLTRB(8.0, h * 0.1, 200.0, 50.0),
               child: Text('Restorify',
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
             ),
             Padding(
-              padding: const EdgeInsets.fromLTRB(8.0, 400.0, 8.0, 10.0),
+              padding: EdgeInsets.fromLTRB(8.0, h * 0.5, 8.0, 10.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
