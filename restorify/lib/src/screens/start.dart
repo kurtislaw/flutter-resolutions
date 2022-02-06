@@ -48,7 +48,7 @@ class _StartScreenState extends State<StartScreen> {
                     margin: EdgeInsets.all(10),
                     child: RaisedButton(
                       onPressed: () {
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) => LoginScreen()));
                       },
                       shape: RoundedRectangleBorder(
@@ -85,7 +85,7 @@ class _StartScreenState extends State<StartScreen> {
                     margin: EdgeInsets.all(10),
                     child: RaisedButton(
                       onPressed: () {
-                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                        Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) => LoginScreen()));
                       },
                       shape: RoundedRectangleBorder(

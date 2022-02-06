@@ -1,6 +1,9 @@
+import 'dart:ffi';
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:restorify/src/screens/home.dart';
+import 'package:restorify/src/screens/start.dart';
 
 class LoginScreen extends StatefulWidget {
   LoginScreen({Key? key}) : super(key: key);
@@ -10,7 +13,8 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  late String _email, _password;
+  String _email = '';
+  String _password = '';
   final auth = FirebaseAuth.instance;
 
   @override
@@ -27,8 +31,23 @@ class _LoginScreenState extends State<LoginScreen> {
       ),
       child: Column(
         children: [
+          Container(
+            alignment: Alignment.topLeft,
+            child: Padding(
+              padding: EdgeInsets.fromLTRB(8.0, 70.0, 8.0, 8.0),
+              child: FlatButton(
+                onPressed: () {
+                  Navigator.of(context).pop(context);
+                },
+                child: Text(
+                  'Back',
+                  style: TextStyle(fontSize: 30),
+                ),
+              ),
+            ),
+          ),
           Padding(
-            padding: EdgeInsets.fromLTRB(8.0, 200.0, 175.0, 8.0),
+            padding: EdgeInsets.fromLTRB(8.0, 30.0, 175.0, 8.0),
             child: Container(
               width: 200,
               height: 40,
@@ -66,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.fromLTRB(8.0, 400.0, 8.0, 10.0),
+            padding: const EdgeInsets.fromLTRB(8.0, 400.0, 8.0, 0.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -77,7 +96,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     onPressed: () {
                       auth.signInWithEmailAndPassword(
                           email: _email, password: _password);
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      Navigator.of(context).push(MaterialPageRoute(
                           builder: (context) => HomeScreen()));
                     },
                     shape: RoundedRectangleBorder(
@@ -99,7 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             BoxConstraints(maxWidth: 100.0, minHeight: 30.0),
                         alignment: Alignment.center,
                         child: Text(
-                          "Signin",
+                          "Login",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                               color: Color.fromARGB(255, 0, 0, 0),

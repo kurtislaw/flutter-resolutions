@@ -23,8 +23,7 @@ class HomeScreen extends StatelessWidget {
         child: Text('logout'),
         onPressed: () {
           auth.signOut();
-          Navigator.of(context).pushReplacement(
-              MaterialPageRoute(builder: (context) => LoginScreen()));
+          Navigator.of(context).pop();
         },
       ),
     ));
