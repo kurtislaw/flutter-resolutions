@@ -100,7 +100,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       auth.signInWithEmailAndPassword(
                           email: _email, password: _password);
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => StartScreen()));
+                          builder: (context) => DashboardScreen()));
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(80.0)),
