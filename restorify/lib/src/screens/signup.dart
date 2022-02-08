@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:restorify/src/screens/dashboard.dart';
 import 'package:restorify/src/screens/home.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -96,7 +97,7 @@ class _SignupScreenState extends State<SignupScreen> {
                       auth.createUserWithEmailAndPassword(
                           email: _email, password: _password);
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => HomeScreen()));
+                          builder: (context) => DashboardScreen()));
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(80.0)),
