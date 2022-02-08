@@ -22,9 +22,9 @@ if (flutterVersionName == null) {
 }
 
 apply plugin: 'com.android.application'
-apply plugin: 'kotlin-android'
-apply plugin: 'com.google.gms.google-services'  // Google Services plugin
+apply plugin: 'kotlin-android' // Google Services plugin
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+apply plugin: 'com.google.gms.google-services' 
 
 android {
     compileSdkVersion flutter.compileSdkVersion
@@ -49,6 +49,7 @@ android {
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
+        multiDexEnabled true
     }
 
     buildTypes {
@@ -74,6 +75,8 @@ dependencies {
 
     // Declare the dependency for the Firebase SDK for Google Analytics
     implementation 'com.google.firebase:firebase-analytics'
+
+    implementation 'com.android.support:multidex:1.0.3' //add this line
 
     // Declare the dependencies for any other desired Firebase products
     // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
