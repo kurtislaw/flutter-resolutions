@@ -93,11 +93,23 @@ class _SignupScreenState extends State<SignupScreen> {
                   height: 50.0,
                   margin: EdgeInsets.all(10),
                   child: RaisedButton(
-                    onPressed: () {
-                      auth.createUserWithEmailAndPassword(
-                          email: _email, password: _password);
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => DashboardScreen()));
+                    onPressed: () async {
+                      try {
+                        UserCredential userCredential = await FirebaseAuth
+                            .instance
+                            .createUserWithEmailAndPassword(
+                                email: _email, password: _password);
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => DashboardScreen()));
+                      } on FirebaseAuthException catch (e) {
+                        if (e.code == 'weak-password') {
+                          print('The password provided is too weak.');
+                        } else if (e.code == 'email-already-in-use') {
+                          print('The account already exists for that email.');
+                        }
+                      } catch (e) {
+                        print(e);
+                      }
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(80.0)),
