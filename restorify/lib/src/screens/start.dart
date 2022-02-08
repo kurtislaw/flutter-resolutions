@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:restorify/src/screens/home.dart';
 import 'package:restorify/src/screens/login.dart';
+import 'package:restorify/src/screens/signup.dart';
 
 class StartScreen extends StatefulWidget {
   StartScreen({Key? key}) : super(key: key);
@@ -51,7 +52,7 @@ class _StartScreenState extends State<StartScreen> {
                     child: RaisedButton(
                       onPressed: () {
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => LoginScreen()));
+                            builder: (context) => SignupScreen()));
                       },
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(80.0)),
