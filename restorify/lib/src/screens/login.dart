@@ -16,7 +16,6 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   String _email = '';
   String _password = '';
-  final auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -96,11 +95,21 @@ class _LoginScreenState extends State<LoginScreen> {
                   height: 50.0,
                   margin: EdgeInsets.all(10),
                   child: RaisedButton(
-                    onPressed: () {
-                      auth.signInWithEmailAndPassword(
-                          email: _email, password: _password);
-                      Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => DashboardScreen()));
+                    onPressed: () async {
+                      try {
+                        UserCredential userCredential = await FirebaseAuth
+                            .instance
+                            .signInWithEmailAndPassword(
+                                email: _email, password: _password);
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => DashboardScreen()));
+                      } on FirebaseAuthException catch (e) {
+                        if (e.code == 'user-not-found') {
+                          print('No user found for that email.');
+                        } else if (e.code == 'wrong-password') {
+                          print('Wrong password provided for that user.');
+                        }
+                      }
                     },
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(80.0)),
