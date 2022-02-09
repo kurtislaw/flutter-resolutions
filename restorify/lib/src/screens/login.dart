@@ -20,6 +20,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
+    double w = MediaQuery.of(context).size.width;
 
     return Scaffold(
         body: Container(
@@ -87,8 +88,27 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           Padding(
+            padding: EdgeInsets.fromLTRB(8.0, 10.0, 0.6 * w, 0.0),
+            child: Container(
+              height: 20,
+              width: 250,
+              child: FlatButton(
+                child: Text("Reset Password"),
+                textColor: Color.fromARGB(255, 202, 76, 67),
+                onPressed: () async {
+                  try {
+                    var test = await FirebaseAuth.instance
+                        .sendPasswordResetEmail(email: _email);
+                  } on FirebaseAuthException catch (e) {
+                    print("error resetting password");
+                  }
+                },
+              ),
+            ),
+          ),
+          Padding(
             padding: EdgeInsets.fromLTRB(8.0, h * 0.4, 8.0, 0.0),
-            child: Row(
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Container(
