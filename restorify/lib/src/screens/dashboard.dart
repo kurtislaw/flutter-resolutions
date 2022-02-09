@@ -20,9 +20,11 @@ class DashboardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
     String name = "Tony";
+    final rocketImage = 'assets/images/Saly-43.png';
 
     return MaterialApp(
       home: Scaffold(
+        resizeToAvoidBottomInset: false,
         extendBody: true,
         bottomNavigationBar: NavigationBar_1(),
         body: Container(
@@ -35,28 +37,66 @@ class DashboardScreen extends StatelessWidget {
                     sigmaY: 5,
                   ),
                   child: Stack(
+                    clipBehavior: Clip.none,
                     children: [
                       Positioned.fill(
                         child: AnimatedBackground(),
                       ),
                       Container(
-                        padding: const EdgeInsets.only(
-                          left: 30,
-                          top: 50,
-                        ),
+                        // padding: const EdgeInsets.only(
+                        //   left: 30,
+                        //   top: 20,
+                        // ),
                         child: Column(
                           children: [
-                            Row(
+                            Stack(
                               children: [
-                                Text(
-                                  'Hi ' + name + ' !',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontFamily: 'Open Sans',
-                                    fontSize: 40,
+                                Positioned(
+                                  right: 0,
+                                  left: 100,
+                                  top: 0,
+                                  bottom: -20,
+                                  child: Image.asset(
+                                    rocketImage,
+                                    width: 150,
+                                    height: 150,
+                                    fit: BoxFit.cover,
+                                    
+                                  ),
+                                ),
+                                Container(
+                                  padding: const EdgeInsets.only(
+                                    left: 0,
+                                    top: 80,
+                                    right: 100,
+                                  ),
+                                  child: Text(
+                                    'Hi ' + name + ' !',
+                                    style: TextStyle(
+                                      color: Colors.black,
+                                      fontFamily: 'Open Sans',
+                                      fontSize: 40,
+                                    ),
+                                    textAlign: TextAlign.left,
                                   ),
                                 ),
                               ],
+                            ),
+                            
+                            AspectRatio(
+                              aspectRatio: 2.5 / 2,
+                              child: Container(
+                                child: Text('Goals Completed'),
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.rectangle,
+                                    color: Color.fromARGB(98, 255, 251, 251),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(20))),
+                                alignment: Alignment.topLeft,
+                                margin: EdgeInsets.all(25.0),
+                                padding: EdgeInsets.all(15),
+                              ),
+                              
                             ),
                           ],
                         ),
