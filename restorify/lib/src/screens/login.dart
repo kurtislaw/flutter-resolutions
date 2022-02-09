@@ -51,45 +51,67 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(8.0, h * 0.05, 175.0, 8.0),
+                padding: EdgeInsets.fromLTRB(w * 0.15, 8.0, w * 0.15, 8.0),
                 child: Container(
-                  width: 200,
-                  height: 40,
+                  width: 300,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(Radius.circular(20)),
+                    color: Color.fromARGB(117, 216, 216, 216),
+                  ),
                   alignment: Alignment.center,
-                  child: TextField(
-                    textAlign: TextAlign.start,
-                    autocorrect: false,
-                    keyboardType: TextInputType.emailAddress,
-                    decoration: InputDecoration(
-                      hintText: 'Email',
+                  child: Container(
+                    width: 230,
+                    height: 40,
+                    child: TextField(
+                      textAlign: TextAlign.start,
+                      autocorrect: false,
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                        hintText: 'Email',
+                        border: InputBorder.none,
+                      ),
+                      onChanged: (value) {
+                        setState(() {
+                          _email = value.trim();
+                        });
+                      },
                     ),
-                    onChanged: (value) {
-                      setState(() {
-                        _email = value.trim();
-                      });
-                    },
                   ),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(8.0, 8.0, 175.0, 8.0),
+                padding: EdgeInsets.fromLTRB(w * 0.15, 8.0, w * 0.15, 8.0),
                 child: Container(
-                  width: 200,
-                  height: 40,
-                  child: TextField(
-                    autocorrect: false,
-                    obscureText: true,
-                    decoration: InputDecoration(hintText: 'Password'),
-                    onChanged: (value) {
-                      setState(() {
-                        _password = value.trim();
-                      });
-                    },
+                  width: 300,
+                  height: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(Radius.circular(20)),
+                    color: Color.fromARGB(117, 216, 216, 216),
+                  ),
+                  alignment: Alignment.center,
+                  child: Container(
+                    width: 230,
+                    height: 40,
+                    child: TextField(
+                      textAlign: TextAlign.start,
+                      autocorrect: false,
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                        hintText: 'Password',
+                        border: InputBorder.none,
+                      ),
+                      onChanged: (value) {
+                        setState(() {
+                          _password = value.trim();
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(8.0, 10.0, 0.6 * w, 0.0),
+                padding: EdgeInsets.fromLTRB(w * 0.15, 10.0, w * 0.4, 0.0),
                 child: Container(
                   height: 20,
                   width: 250,
