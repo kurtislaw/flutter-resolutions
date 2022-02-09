@@ -1,34 +1,41 @@
 {
   "project_info": {
-    "project_number": "144170532033",
-    "project_id": "flutter-basic-7cd98",
-    "storage_bucket": "flutter-basic-7cd98.appspot.com"
+    "project_number": "236848522159",
+    "project_id": "restorify-9ee5d",
+    "storage_bucket": "restorify-9ee5d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:144170532033:android:bd4388cdca29efd96e2840",
+        "mobilesdk_app_id": "1:236848522159:android:37b9ce043261492aa6c55a",
         "android_client_info": {
           "package_name": "com.example.restorify"
         }
       },
       "oauth_client": [
         {
-          "client_id": "144170532033-rbreoaj0ngoaeaobreu4p6rv7t9dbncv.apps.googleusercontent.com",
+          "client_id": "236848522159-eaqttei9iag3kevbg3qle3hh7mmo0ri5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBV7r8j0wcayO3c1TKFN-_IqicIF1bC2b8"
+          "current_key": "AIzaSyATOPIXaw5cDjUB9AhjVXcKiIrXHW3uIlg"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "144170532033-rbreoaj0ngoaeaobreu4p6rv7t9dbncv.apps.googleusercontent.com",
+              "client_id": "236848522159-eaqttei9iag3kevbg3qle3hh7mmo0ri5.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "236848522159-oje8bvqdt6asa6vtufb66g3engo1ps8i.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.restorify"
+              }
             }
           ]
         }

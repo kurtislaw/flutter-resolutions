@@ -13,7 +13,6 @@ class SignupScreen extends StatefulWidget {
 class _SignupScreenState extends State<SignupScreen> {
   String _email = '';
   String _password = '';
-  final auth = FirebaseAuth.instance;
 
   @override
   Widget build(BuildContext context) {
@@ -107,6 +106,7 @@ class _SignupScreenState extends State<SignupScreen> {
                         } else if (e.code == 'email-already-in-use') {
                           print('The account already exists for that email.');
                         }
+                        print(e);
                       } catch (e) {
                         print(e);
                       }
