@@ -61,8 +61,8 @@ class _StartScreenState extends State<StartScreen> {
                         decoration: BoxDecoration(
                             gradient: LinearGradient(
                               colors: [
-                                Color.fromARGB(255, 255, 255, 255),
-                                Color.fromARGB(255, 255, 255, 255)
+                                Color.fromARGB(255, 49, 144, 252),
+                                Color.fromARGB(255, 49, 144, 252),
                               ],
                               begin: Alignment.centerLeft,
                               end: Alignment.centerRight,
@@ -76,7 +76,7 @@ class _StartScreenState extends State<StartScreen> {
                             "Sign up",
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                color: Color.fromARGB(255, 0, 0, 0),
+                                color: Color.fromARGB(255, 255, 255, 255),
                                 fontSize: 15),
                           ),
                         ),

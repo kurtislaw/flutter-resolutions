@@ -51,7 +51,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.fromLTRB(w * 0.15, 8.0, w * 0.15, 8.0),
+                padding: EdgeInsets.fromLTRB(w * 0.15, h * 0.1, w * 0.15, 8.0),
                 child: Container(
                   width: 300,
                   height: 50,
@@ -96,6 +96,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: TextField(
                       textAlign: TextAlign.start,
                       autocorrect: false,
+                      obscureText: true,
                       keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                         hintText: 'Password',
