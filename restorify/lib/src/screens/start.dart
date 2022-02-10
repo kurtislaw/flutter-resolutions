@@ -48,11 +48,12 @@ class _StartScreenState extends State<StartScreen> {
               padding: EdgeInsets.fromLTRB(8.0, 0.0, 0.0, 0.0),
               child: Image.asset(
                 logo,
+                height: 450,
                 fit: BoxFit.cover,
               ),
             ),
             Padding(
-              padding: EdgeInsets.fromLTRB(8.0, h * 0.01, 8.0, 10.0),
+              padding: EdgeInsets.fromLTRB(8.0, h * 0.05, 8.0, 10.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
