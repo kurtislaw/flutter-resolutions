@@ -2,6 +2,7 @@ import 'dart:ffi';
 import 'dart:ui';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:restorify/src/screens/todolist.dart';
 import 'package:simple_animations/simple_animations.dart';
 import 'package:restorify/src/screens/navigation_bar.dart';
 import 'package:restorify/src/screens/animated_background.dart';
@@ -87,6 +88,22 @@ class DashboardScreen extends StatelessWidget {
                               aspectRatio: 2.5 / 2,
                               child: Container(
                                 child: Text('Goals Completed'),
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.rectangle,
+                                    color: Color.fromARGB(98, 255, 251, 251),
+                                    borderRadius:
+                                        BorderRadius.all(Radius.circular(20))),
+                                alignment: Alignment.topLeft,
+                                margin: EdgeInsets.all(25.0),
+                                padding: EdgeInsets.all(15),
+                              ),
+                              
+                            ),
+                            
+                            AspectRatio(
+                              aspectRatio: 4.5 / 3,
+                              child: Container(
+                                child: ToDoListScreen(),
                                 decoration: BoxDecoration(
                                     shape: BoxShape.rectangle,
                                     color: Color.fromARGB(98, 255, 251, 251),
