@@ -15,6 +15,9 @@ class _StartScreenState extends State<StartScreen> {
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
+    double w = MediaQuery.of(context).size.width;
+
+    final logo = 'assets/images/logo.png';
 
     return Scaffold(
       body: Container(
@@ -37,12 +40,20 @@ class _StartScreenState extends State<StartScreen> {
               ),
             ),
             Padding(
-              padding: EdgeInsets.fromLTRB(8.0, h * 0.1, 200.0, 50.0),
+              padding: EdgeInsets.fromLTRB(8.0, h * 0.07, 200.0, 0.0),
               child: Text('Restorify',
                   style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
             ),
             Padding(
-              padding: EdgeInsets.fromLTRB(8.0, h * 0.5, 8.0, 10.0),
+              padding: EdgeInsets.fromLTRB(8.0, 0.0, 0.0, 0.0),
+              child: Image.asset(
+                logo,
+                height: 450,
+                fit: BoxFit.cover,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.fromLTRB(8.0, h * 0.05, 8.0, 10.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

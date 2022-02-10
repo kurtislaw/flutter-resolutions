@@ -35,20 +35,24 @@ class _LoginScreenState extends State<LoginScreen> {
           ),
           child: Column(
             children: [
-              Container(
-                alignment: Alignment.topLeft,
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(8.0, h * 0.1, 8.0, 8.0),
-                  child: FlatButton(
-                    onPressed: () {
-                      Navigator.of(context).pop(context);
-                    },
-                    child: Text(
-                      'Back',
-                      style: TextStyle(fontSize: 30),
+              Row(
+                children: [
+                  Container(
+                    alignment: Alignment.topLeft,
+                    child: Padding(
+                      padding: EdgeInsets.fromLTRB(8.0, h * 0.1, 8.0, 8.0),
+                      child: FlatButton(
+                        onPressed: () {
+                          Navigator.of(context).pop(context);
+                        },
+                        child: Text(
+                          'Back',
+                          style: TextStyle(fontSize: 30),
+                        ),
+                      ),
                     ),
                   ),
-                ),
+                ],
               ),
               Padding(
                 padding: EdgeInsets.fromLTRB(w * 0.15, h * 0.1, w * 0.15, 8.0),
