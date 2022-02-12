@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:restorify/src/screens/home.dart';
 import 'package:restorify/src/screens/login.dart';
 import 'package:restorify/src/screens/signup.dart';
+import 'package:restorify/src/widgets/animated_background.dart';
+import 'package:blur/blur.dart';
 
 class StartScreen extends StatefulWidget {
   StartScreen({Key? key}) : super(key: key);
@@ -12,16 +14,29 @@ class StartScreen extends StatefulWidget {
 }
 
 class _StartScreenState extends State<StartScreen> {
+  List<Color> ColorList = [
+    Color.fromARGB(255, 244, 179, 199),
+    Color.fromARGB(255, 230, 17, 88),
+    Color.fromARGB(255, 199, 125, 199),
+    Color.fromARGB(255, 251, 188, 191),
+    Color.fromARGB(255, 212, 108, 216),
+    Color.fromARGB(255, 255, 81, 0),
+    Color.fromARGB(255, 222, 121, 140),
+    Color.fromARGB(255, 235, 167, 169),
+    Color.fromARGB(255, 199, 125, 199),
+    Color.fromARGB(255, 114, 23, 219)
+  ];
+
   @override
   Widget build(BuildContext context) {
     double h = MediaQuery.of(context).size.height;
     double w = MediaQuery.of(context).size.width;
+    
 
     final logo = 'assets/images/logo.png';
 
     return Scaffold(
       body: Container(
-        width: double.infinity,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: NetworkImage(

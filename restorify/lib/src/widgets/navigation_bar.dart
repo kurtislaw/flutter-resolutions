@@ -19,7 +19,7 @@ class NavigationBarState extends State<NavigationBar_1> {
   Widget build(BuildContext context) {
     final grey = Colors.grey;
     return BottomNavyBar(
-      backgroundColor: Color.fromARGB(255, 0, 0, 0),
+      backgroundColor: Color.fromARGB(43, 0, 0, 0),
       selectedIndex: NavigationBar_1._selectedIndex,
       showElevation: true,
       itemCornerRadius: 24,

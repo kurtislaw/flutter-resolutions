@@ -3,7 +3,7 @@ import 'package:restorify/src/screens/dashboard.dart';
 import 'package:restorify/src/screens/home.dart';
 import 'package:restorify/src/screens/login.dart';
 import 'package:restorify/src/screens/start.dart';
-import 'package:restorify/src/screens/animated_background.dart';
+import 'package:restorify/src/widgets/animated_background.dart';
 
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
